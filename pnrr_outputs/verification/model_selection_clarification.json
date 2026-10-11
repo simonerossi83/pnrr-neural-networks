@@ -1,0 +1,31 @@
+{
+  "review_date": "2026-10-11",
+  "source_run": "run_20261006T152742_823621Z",
+  "interpretation_cells_executed": 2,
+  "original_31_computation_cells_preserved": true,
+  "full_training_repeated": false,
+  "purpose": "Explain aspirational target, modest performance and research selection versus deployment preference.",
+  "notebook_sha256": "75bdaa7f5a2cd0b4f19565ceb41e8ad1b23edcfb737f1d7a5adb37b0a3e011e7",
+  "notebook_structure_valid": true,
+  "all_five_plot_images_unchanged": true,
+  "model_parameters_and_predictions_unchanged": true,
+  "notebook_html_exported": true,
+  "full_page_visual_review_performed": false,
+  "explanation_checks": {
+    "mlp_validation_macro_f1": 0.4414763181129752,
+    "logistic_validation_macro_f1": 0.38195567841790046,
+    "mlp_minus_logistic_test": {
+      "point_difference": 0.008440293510434682,
+      "ci95": [
+        -0.03233769780157055,
+        0.04221212949777106
+      ],
+      "one_sided_95_lower": -0.024900676254280617,
+      "replicates": 1000,
+      "independent_test_groups": 24,
+      "caveat": "Few groups per class; absent classes get F1=0 in a replicate. Interval is exploratory."
+    },
+    "weak_class_arithmetic_bound": 0.7617343135967077
+  },
+  "targeted_standalone_tests_passed": 2
+}

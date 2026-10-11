@@ -327,6 +327,11 @@ Both assess agreement with inherited labels, which can themselves be ambiguous.
 '''
 
 
+EXECUTIVE_DECISION_NOTES = '''**Why the target was missed, and how to read 0.389.** The 0.80 target was aspirational, not an established benchmark for this title-only task. Inherited labels, missing context and unfamiliar programmes are plausible constraints; the observed learning curves show overfitting. Digitalisation F1 was 0.008 and infrastructure F1 0.086. If these two scores stayed fixed, even perfect performance on the other six themes would give only 0.762 macro-F1. This illustrates why the weak themes must improve, without proving that 0.80 is unattainable. The 0.389 result is useful exploratory evidence of category clues, with education/research reaching 0.815, but modest overall performance.
+
+**Why retain MLP rather than claim it wins.** Validation macro-F1 was 0.441 for MLP, 0.395 for CNN and 0.382 for logistic regression. MLP was the leading neural candidate before test evaluation, fitting the assignment's neural-network requirement. Its test advantage over logistic regression then narrowed to 0.0084 and was uncertain. Logistic regression remains a practical reference candidate because of its simplicity and lower test log-loss (1.488 versus 1.652). Retaining MLP for research, explanations and export is justified; preferring it for deployment on this evidence is not.'''
+
+
 TECHNICAL_RESULTS_CODE = dedent(r'''
 def technical_result_brief(r, audit, report, histories, shap_diagnostics):
     """Explain current-run results using only already computed notebook objects."""
@@ -338,6 +343,18 @@ def technical_result_brief(r, audit, report, histories, shap_diagnostics):
     class_rows = report[(report.model == selected) & report.category.isin(r['classes'])].copy()
     strongest = class_rows.loc[class_rows['f1-score'].idxmax()]
     weakest = class_rows.loc[class_rows['f1-score'].idxmin()]
+    weakest_two = class_rows.nsmallest(2, 'f1-score')
+    fixed_weak_class_ceiling = (len(class_rows) - 2 + weakest_two['f1-score'].sum()) / len(class_rows)
+    weak_pair = ' and '.join(f"{row['category']} ({row['f1-score']:.3f})" for _, row in weakest_two.iterrows())
+    selected_validation = r['runs'][r['selected'][selected]]['validation']['macro_f1']
+    logistic_validation = next(item['validation']['macro_f1'] for item in r['baseline_tuning']
+                               if item['C'] == r['logistic_selected_C'])
+    selected_history = histories[r['selected'][selected]]
+    mlp_class = report[(report.model == 'MLP') & report.category.isin(r['classes'])].set_index('category')['f1-score']
+    logistic_class = report[(report.model == 'Logistic') & report.category.isin(r['classes'])].set_index('category')['f1-score']
+    class_differences = mlp_class - logistic_class
+    improved_classes = int((class_differences > 0).sum())
+    worse_classes = int((class_differences < 0).sum())
     train_counts = r['diagnostics']['train']['class_counts']
     test_counts = r['diagnostics']['test']['class_counts']
     majority_theme = max(train_counts, key=train_counts.get)
@@ -393,6 +410,37 @@ def technical_result_brief(r, audit, report, histories, shap_diagnostics):
         f"The proposed 0.80 equal-theme target was **{target_status}**, and the selected neural model's "
         f"+0.03 improvement goal was **{gain_status}** (observed difference {selected_gain:+.3f}). "
         "These goals were chosen for the project, not independently established deployment thresholds.",
+        "**Why the 0.80 target is demanding.** It was an aspirational proposal goal, not a literature-backed "
+        "benchmark shown to be attainable from these titles. Macro-F1 gives each theme equal weight: "
+        f"the two weakest {selected} themes were {weak_pair}. If those two scores stayed fixed, even perfect "
+        f"F1 on every other theme would give only {fixed_weak_class_ceiling:.3f} overall. "
+        "This is an arithmetic illustration, not an estimated performance ceiling for future models. "
+        "Short titles omit context, and inherited programme labels can differ from the activity described; "
+        "these are plausible constraints, not measured label-error rates or proof that 0.80 is impossible. "
+        "Group isolation deliberately tests unfamiliar programmes rather than repeated templates. "
+        f"By the final monitored epoch, {selected} training macro-F1 was "
+        f"{selected_history.iloc[-1]['train_macro_f1']:.3f}, versus "
+        f"{selected_history.iloc[-1]['val_macro_f1']:.3f} on validation; test evaluation uses the best validation checkpoint. "
+        "This observed gap supports overfitting/generalization difficulty, so simply adding epochs is not a demonstrated remedy. "
+        "The bounded training sample and narrow tuning are additional constraints whose individual effects were not isolated.",
+        f"**What {scores_now['macro_f1']:.3f} does and does not mean.** It is not the percentage of correct titles. "
+        f"It shows some transferable category recognition, particularly {strongest['category']} "
+        f"(F1 {strongest['f1-score']:.3f}), under the programme-held-out test. This is useful exploratory evidence "
+        "for a neural-network learning project, but modest overall predictive quality rather than a strong deployment result. "
+        "The training-majority reference collapses under the changed class mix, so beating it cannot establish useful quality. "
+        f"The meaningful text baseline already achieves {logistic_now['macro_f1']:.3f}; "
+        "there is no task-independent threshold that makes this result good, and weak-theme failures remain consequential.",
+        f"**Why retain {selected}, and why not declare it better than logistic regression?** "
+        "The selection rule was validation macro-F1, before examining test outcomes. "
+        f"The selected neural candidate scored {selected_validation:.3f} on validation, versus "
+        f"{logistic_validation:.3f} for the tuned logistic reference. The assignment requires a neural network, "
+        "so carrying this candidate through SHAP and graph-export demonstrations is justified as a research choice. "
+        f"On test data its advantage shrank to {selected_gain:+.4f}. MLP improved on logistic regression in "
+        f"{improved_classes} themes and worsened in {worse_classes}; the average hides different error costs. "
+        "Selection therefore does not establish a deployment preference. Logistic regression has fewer moving parts "
+        "and readable coefficients; its measured tuning cost and test log-loss are reported below. "
+        "Keep it as the practical reference candidate until replicated neural gains, acceptable theme-level errors "
+        "and a validated review policy justify additional complexity. Neither model is approved for automated public decisions.",
         f"**What uncertainty allows us to say.** MLP minus logistic regression was {gain:+.4f} macro-F1. "
         f"Its exploratory 95% interval was [{interval[0]:+.4f}, {interval[1]:+.4f}], which {interval_reading}. "
         f"The one-sided 95% lower bound was {mlp_delta['one_sided_95_lower']:+.4f}, {lower_reading}. "
@@ -477,6 +525,9 @@ def stakeholder_brief(r, audit, report, validation, histories, shap_diagnostics,
     target = 'met' if outcome['macro_f1'] >= .8 else 'not met'
     gain = outcome['macro_f1'] - baseline['macro_f1']
     gain_target = 'met' if gain >= .03 else 'not met'
+    selected_validation = r['runs'][r['selected'][selected]]['validation']['macro_f1']
+    logistic_validation = next(item['validation']['macro_f1'] for item in r['baseline_tuning']
+                               if item['C'] == r['logistic_selected_C'])
     uncertainty = ('The uncertainty range crosses zero, so a reliable advantage has not been established.'
                    if interval[0] <= 0 <= interval[1] else
                    'The uncertainty range favors MLP under this limited test, but needs confirmation.'
@@ -506,6 +557,22 @@ def stakeholder_brief(r, audit, report, validation, histories, shap_diagnostics,
         f"{baseline['macro_f1']:.3f}. The project goals of a 0.80 balanced score and a +0.03 neural improvement "
         f"were **{target}** and **{gain_target}**, respectively. These are project goals, not approved standards "
         "for deciding funding or eligibility.",
+        "**Why the goal was ambitious.** The proposed 0.80 score was an aspiration, not an established standard "
+        "for this dataset. Short titles can omit a project's purpose, and the recorded programme theme can "
+        "describe something broader than its activity. Testing separate programmes also exposes unfamiliar "
+        "wording. The learning curves show much stronger results on training titles than on new programmes. "
+        "These observations and plausible constraints explain the difficulty; they do not prove that 0.80 is impossible. "
+        "Better labels and independent evaluation should come before assuming more training will solve it.",
+        f"**Is {outcome['macro_f1']:.3f} good?** It is useful early evidence that titles contain category clues, "
+        f"especially for {strongest['category']}, but modest overall performance. It is not the share of correct "
+        "titles and does not indicate dependable service quality. A successful learning project can still "
+        "produce a model that needs substantial improvement.",
+        f"**Why the neural model remains in the project.** Before the final test, {selected}'s score on the "
+        f"separate validation examples was {selected_validation:.3f}, versus {logistic_validation:.3f} for logistic "
+        "regression. That supports selecting it for this neural-network experiment and its explanation/export "
+        "demonstrations. It does not show that the small final-test difference warrants deployment. The simpler "
+        "logistic model remains a practical reference candidate; any extra neural complexity should earn a "
+        "repeatable benefit. Neither model is ready to make public decisions independently.",
         f"**What remains uncertain.** MLP's balanced-score difference from logistic regression was "
         f"{delta['point_difference']:+.3f}; the estimated uncertainty range was "
         f"[{interval[0]:+.3f}, {interval[1]:+.3f}]. {uncertainty} "

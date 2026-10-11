@@ -526,7 +526,9 @@ print('Completed from raw CSVs using only the code defined in this notebook.')''
     narrative.enrich_notebook(nb)
     intro = nb.cells[0].source.split('\n\n', 1)
     nb.cells[0].source = intro[0]
-    nb.cells[1:1] = [md(EXECUTIVE_SUMMARY), md('## Reading and running the notebook\n\n' + intro[1])]
+    executive = EXECUTIVE_SUMMARY.replace('\n\n**What explains the decision.**',
+        '\n\n' + narrative.EXECUTIVE_DECISION_NOTES + '\n\n**What explains the decision.**')
+    nb.cells[1:1] = [md(executive), md('## Reading and running the notebook\n\n' + intro[1])]
     for i, cell in enumerate(nb.cells):
         if cell.cell_type == 'code':
             compile(cell.source, f'cell {i}', 'exec')

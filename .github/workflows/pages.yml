@@ -1,0 +1,43 @@
+name: Publish notebook and choropleth
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Collect saved deliverables
+        run: |
+          mkdir -p _site
+          cp pnrr_outputs/geography/italy_projects.html _site/index.html
+          cp pnrr_outputs/geography/italy_projects.html _site/italy_projects.html
+          cp pnrr_outputs/pnrr_complete_workflow.html _site/notebook.html
+          cp pnrr_complete_workflow.ipynb _site/pnrr_complete_workflow.ipynb
+          cp data/README.md _site/DATA_SOURCES.md
+          touch _site/.nojekyll
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,3 @@
+case,progetto_id,predicted_theme,inherited_theme,base_score,sum_contributions,predicted_score,max_reconstruction_error_all_classes,max_seed_change_pp_predicted_class,top_3_word_positions_shared_across_seeds
+Label agreement,2478,Impresa e lavoro,Impresa e lavoro,0.10621842741966248,0.6469509899616241,0.7531694173812866,1.4901161193847656e-08,0.8900392428040506,3
+Label disagreement,2479,Digitalizzazione,Impresa e lavoro,0.06536183506250381,0.698146365582943,0.7635082006454468,4.470348352603182e-08,4.63799876801204,3

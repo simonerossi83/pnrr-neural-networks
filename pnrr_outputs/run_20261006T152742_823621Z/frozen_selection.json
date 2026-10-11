@@ -1,0 +1,7 @@
+{
+  "neural": {
+    "MLP": "mlp_regularized",
+    "CNN": "cnn_plain"
+  },
+  "logistic_C": 2.0
+}

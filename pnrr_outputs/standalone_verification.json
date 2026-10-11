@@ -1,0 +1,36 @@
+{
+  "verified_utc": "2026-10-06T15:40:18.800999+00:00",
+  "isolated_directory": "/var/folders/wp/526nxv312wn8gb4nnk3p61300000gn/T/pnrr-colab-audit-akow9jym",
+  "initial_files": [
+    "pnrr_complete_workflow.ipynb",
+    "data/progetti.csv",
+    "data/misure.csv",
+    "data/temi.csv"
+  ],
+  "executed_code_cells": 31,
+  "execution_errors": 0,
+  "prior_artifacts_used": false,
+  "full_training": true,
+  "budget_changed": false,
+  "copied_outputs": "/Users/simonerossi/Documents/ToU/Neural networks/pnrr_outputs/run_20261006T152742_823621Z",
+  "hosted_colab_execution": false,
+  "dependency_environment": "Existing local Python 3.13 environment; not a fresh package installation",
+  "notebook_execution_completed": true,
+  "local_html_export_recovery": "nbconvert inherited environment missed Anaconda templates; explicit template directory used. Notebook execution had already succeeded.",
+  "colab_setup_checks_passed": 9,
+  "project_tests_passed": 13,
+  "final_setup_reexecuted_locally": true,
+  "setup_hash_during_full_pipeline_run": "a003abbc2e13f52c9f5ecf6a668407151d7493b8e18e658b6f91e9333ae6f8e4",
+  "final_setup_sha256": "83982f55a899a6ff705e3ce2a844fd3a347c40d212550130d7358159709e2a7d",
+  "setup_finalization": "Pip requirement shell quoting finalized after the full run began; updated bootstrap executed separately locally and verified by nine mocked setup-path checks. Model/data/evaluation code unchanged.",
+  "notebook_sha256": "3f8d236e5e0cf391be5927e2fada0c4972605f090faf9c59cfe96b763807a130",
+  "visual_review": "All five notebook plot outputs and two static geography figures inspected. Full notebook-page and interactive choropleth browser rendering not performed: browser URL policy rejected local file access.",
+  "current_narrative_revision": {
+    "record": "pnrr_outputs/verification/narrative_verification.json",
+    "current_notebook_sha256": "6f5124b07566ae56eb69c28e92821b91547811155c4948951b8054e2d59da940",
+    "current_code_cells": 33,
+    "added_narrative_cells_executed_against_verified_run": 2,
+    "original_computation_and_plot_outputs_preserved": true,
+    "full_training_repeated_for_narrative_revision": false
+  }
+}

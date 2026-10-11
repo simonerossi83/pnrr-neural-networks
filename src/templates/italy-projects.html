@@ -1,0 +1,120 @@
+<div id="pnrr-italy-map">
+  <style>
+    #pnrr-italy-map { color: var(--foreground); }
+    #pnrr-italy-map .map-controls { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; }
+    #pnrr-italy-map .map-field { flex: 1 1 240px; }
+    #pnrr-italy-map .map-field label { display: block; margin-bottom: 6px; }
+    #pnrr-italy-map .map-figure { display: block; width: 100%; max-height: 620px; }
+    #pnrr-italy-map .map-figure path { stroke: var(--background); stroke-width: 1; vector-effect: non-scaling-stroke; }
+    #pnrr-italy-map .map-figure path:hover { stroke: var(--foreground); stroke-width: 1.8; }
+    #pnrr-italy-map .map-legend { max-width: 360px; margin: 8px auto 12px; }
+    #pnrr-italy-map .legend-ramp { height: 10px; background: linear-gradient(to right, color-mix(in srgb, var(--viz-series-1) 8%, var(--background)), var(--viz-series-1)); }
+    #pnrr-italy-map .legend-values { display: flex; justify-content: space-between; margin-top: 4px; }
+    #pnrr-italy-map .map-detail { min-height: 2.5em; text-align: center; }
+    #pnrr-italy-map details { margin-top: 14px; }
+    #pnrr-italy-map .map-source { margin-top: 16px; }
+    @media (prefers-reduced-motion: no-preference) { #pnrr-italy-map .map-figure path { transition: fill .2s; } }
+  </style>
+  <h2>PNRR projects across Italy</h2>
+  <div class="map-controls">
+    <div class="map-field">
+      <label class="form-label" for="pnrr-theme">Recorded programme theme</label>
+      <select id="pnrr-theme" class="form-select"></select>
+    </div>
+  </div>
+  <p id="pnrr-coverage" class="text-small tabular-nums" aria-live="polite"></p>
+  <svg class="map-figure" viewBox="0 0 660 700" role="img" aria-labelledby="pnrr-map-title pnrr-map-desc">
+    <title id="pnrr-map-title">Projects by Italian region</title>
+    <desc id="pnrr-map-desc">Stronger blue represents more distinct projects. Regional values are also available in the table below.</desc>
+    <!-- REGION_PATHS -->
+  </svg>
+  <div class="map-legend" aria-label="Linear colour scale">
+    <div class="legend-ramp"></div>
+    <div class="legend-values text-small tabular-nums"><span>0</span><span id="pnrr-legend-max"></span></div>
+    <div class="text-small">Projects per region · scale adjusts to selected theme</div>
+  </div>
+  <div id="pnrr-region-detail" class="map-detail tabular-nums"></div>
+  <details>
+    <summary class="cursor-interaction">Regional counts and share of regional projects</summary>
+    <div class="table-responsive">
+      <table class="table table-sm">
+        <thead><tr><th scope="col">Region</th><th scope="col" class="text-end">Projects</th><th scope="col" class="text-end">Share of region's projects</th></tr></thead>
+        <tbody id="pnrr-region-table"></tbody>
+      </table>
+    </div>
+  </details>
+  <div class="map-source text-small">Local OpenPNRR snapshot (date unknown) · <a href="https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/" target="_blank" rel="noopener noreferrer">ISTAT 2025 boundaries</a></div>
+  <script>
+    (() => {
+      const root = document.getElementById('pnrr-italy-map');
+      const data = /* MAP_DATA */null;
+      const select = root.querySelector('#pnrr-theme');
+      const detail = root.querySelector('#pnrr-region-detail');
+      const number = new Intl.NumberFormat('en-GB');
+      const pct = new Intl.NumberFormat('en-GB', { style: 'percent', maximumFractionDigits: 1 });
+      const labels = Object.keys(data.series);
+      labels.forEach(label => {
+        const option = document.createElement('option');
+        option.value = label;
+        option.textContent = label;
+        select.appendChild(option);
+      });
+      function describe(index) {
+        const value = data.series[select.value][index];
+        return `${data.regions[index].name}: ${number.format(value)} projects · ${pct.format(value / data.series['All projects'][index])} of this region's projects`;
+      }
+      function draw() {
+        const label = select.value;
+        const values = data.series[label];
+        const maximum = Math.max(...values, 1);
+        const coverage = data.coverage[label];
+        root.querySelector('#pnrr-coverage').textContent = `${number.format(coverage.mapped)} mapped projects · ${number.format(coverage.national_only)} nationwide · ${number.format(coverage.no_location)} without location`;
+        root.querySelector('#pnrr-legend-max').textContent = number.format(Math.max(...values));
+        root.querySelector('#pnrr-map-title').textContent = `${label}: distinct projects by region`;
+        const rows = [];
+        data.regions.forEach((region, index) => {
+          const path = root.querySelector(`[data-region="${region.code}"]`);
+          const intensity = 8 + 92 * values[index] / maximum;
+          path.style.fill = `color-mix(in srgb, var(--viz-series-1) ${intensity.toFixed(3)}%, var(--background))`;
+          path.setAttribute('data-tooltip', describe(index));
+          path.setAttribute('aria-label', describe(index));
+          rows.push({ region, index, value: values[index] });
+        });
+        const tbody = root.querySelector('#pnrr-region-table');
+        tbody.replaceChildren();
+        rows.sort((a, b) => b.value - a.value || a.region.code - b.region.code).forEach(({region, value, index}) => {
+          const tr = document.createElement('tr');
+          [region.name, number.format(value), pct.format(value / data.series['All projects'][index])].forEach((text, column) => {
+            const cell = document.createElement(column === 0 ? 'th' : 'td');
+            cell.textContent = text;
+            if (column === 0) cell.scope = 'row';
+            else cell.className = 'text-end tabular-nums';
+            tr.appendChild(cell);
+          });
+          tbody.appendChild(tr);
+        });
+        detail.textContent = describe(values.indexOf(Math.max(...values)));
+      }
+      data.regions.forEach((region, index) => {
+        const path = root.querySelector(`[data-region="${region.code}"]`);
+        path.addEventListener('pointerenter', () => { detail.textContent = describe(index); });
+        path.addEventListener('click', () => { detail.textContent = describe(index); });
+      });
+      function restore(state) {
+        const theme = state?.modelContent?.theme;
+        select.value = labels.includes(theme) ? theme : 'All projects';
+        draw();
+      }
+      select.addEventListener('change', () => {
+        draw();
+        if (window.openai?.setWidgetState) {
+          window.openai.setWidgetState({ modelContent: { theme: select.value }, privateContent: null }).catch(() => {});
+        }
+      });
+      window.addEventListener('openai:set_globals', event => {
+        if (event.detail?.globals?.widgetState) restore(event.detail.globals.widgetState);
+      });
+      restore(window.openai?.widgetState);
+    })();
+  </script>
+</div>

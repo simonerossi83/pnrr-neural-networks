@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PNRR projects across Italy</title>
+  <style>
+    :root { color-scheme: light dark; --background: light-dark(#ffffff,#17191c); --foreground: light-dark(#202a35,#e6ebf0); --viz-series-1: light-dark(#185f9c,#6fb1ec); --border: light-dark(#d4dce4,#44515e); }
+    body { background: var(--background); color: var(--foreground); font: 16px/1.5 system-ui,sans-serif; max-width: 860px; padding: 24px; margin: 0 auto; }
+    h2 { font-size: 25px; font-weight: 500; margin: 0 0 20px; }
+    select { width: 100%; font: inherit; padding: 10px 12px; background: var(--background); color: var(--foreground); border: 1px solid var(--border); border-radius: 6px; }
+    a { color: var(--viz-series-1); }
+    .text-small { font-size: 13px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .text-end { text-align: right; }
+    .table-responsive { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th,td { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { font-weight: 500; }
+    .method { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 12px; }
+    @media(max-width:480px) { body { padding: 14px; } }
+  </style>
+</head>
+<body>
+  <!-- MAP -->
+  <div class="method text-small">
+    <p>Each project is counted once in every recorded region. Multi-region projects therefore contribute to more than one region; regional totals exceed the number of unique mapped projects. Nationwide projects are not assigned to every region. Repeated municipality and province records within the same region are removed before counting.</p>
+    <p>These are raw project counts, not funding, completion, population-adjusted access, or model predictions. Themes come from the programme hierarchy. All raw projects are eligible, including themes excluded from the title-classification experiment. “Theme unavailable” retains projects whose measure has no matched theme. The local snapshot's date is unknown.</p>
+  </div>
+</body>
+</html>

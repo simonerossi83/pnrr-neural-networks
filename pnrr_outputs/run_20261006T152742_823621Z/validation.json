@@ -1,0 +1,25 @@
+{
+  "executed_utc": "2026-10-06T15:40:18.800999+00:00",
+  "self_contained": true,
+  "input_files": {
+    "progetti.csv": "82af8338002e07bfe62148c82f945d6c302ae256a6ec634a4d511cda77a8d32c",
+    "misure.csv": "d849c07325192cf0d0833545d538b1b2bf138696f375f9dd5b9d633c4168036f",
+    "temi.csv": "ff5b633dc5621603e4a2a6f2237ebb31758f5614251d2647d9a93ac7bd8d344c"
+  },
+  "training_rows": 24000,
+  "validation_rows": 8000,
+  "test_rows": 21219,
+  "neural_runs": [
+    "mlp_plain",
+    "mlp_regularized",
+    "cnn_plain",
+    "cnn_regularized"
+  ],
+  "export_parity_passed": true,
+  "data_and_metric_assertions_passed": true,
+  "shap_additivity_passed": true,
+  "shap_prediction_parity_passed": true,
+  "shap_version": "0.49.1",
+  "shap_cases": 2,
+  "output_directory": "/private/var/folders/wp/526nxv312wn8gb4nnk3p61300000gn/T/pnrr-colab-audit-akow9jym/pnrr_outputs/run_20261006T152742_823621Z"
+}

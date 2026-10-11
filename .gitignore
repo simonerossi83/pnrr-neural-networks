@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.mplconfig/
+.DS_Store
+.env
+.env.*
+!.env.example
+.release/
+*.log
+
+# Raw inputs are distributed in the GitHub release with checksums.
+/data/*.csv
+/data/download.html
+
+# Keep the earlier modular artifacts required by tests and the latest verified run.
+/artifacts/merged/
+/pnrr_outputs/run_*/
+!/pnrr_outputs/run_20261006T152742_823621Z/
+
+# Local audit backups are not submission deliverables.
+/pnrr_outputs/verification/*.ipynb
+/pnrr_outputs/verification/prior_cell_*.png
+/pnrr_outputs/verification/builder_before_narrative.py

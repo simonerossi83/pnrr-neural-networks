@@ -1,0 +1,18 @@
+{
+  "shap_version": "0.49.1",
+  "model": "MLP",
+  "selected_run": "mlp_regularized",
+  "seeds": [
+    42,
+    43
+  ],
+  "permutation_cycles_per_seed": 20,
+  "max_words": 30,
+  "selection": "Lowest project ID in each held-out label-agreement stratum",
+  "features": "Cleaned word occurrences, deleted when masked",
+  "reference": "Empty title (all word-inclusion features zero)",
+  "output": "Uncalibrated softmax score, identity link",
+  "seconds": 3.7255195420002565,
+  "all_class_additivity_passed": true,
+  "prediction_parity_passed": true
+}

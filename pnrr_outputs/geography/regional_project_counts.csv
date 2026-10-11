@@ -1,0 +1,241 @@
+theme,region_code,region,projects,share_of_region_projects
+All projects,1,Piemonte,24051,1.0
+All projects,2,Valle d'Aosta,1017,1.0
+All projects,3,Lombardia,44487,1.0
+All projects,4,Trentino-Alto Adige,9537,1.0
+All projects,5,Veneto,26763,1.0
+All projects,6,Friuli-Venezia Giulia,6171,1.0
+All projects,7,Liguria,5667,1.0
+All projects,8,Emilia-Romagna,22293,1.0
+All projects,9,Toscana,17220,1.0
+All projects,10,Umbria,4990,1.0
+All projects,11,Marche,8222,1.0
+All projects,12,Lazio,21387,1.0
+All projects,13,Abruzzo,8679,1.0
+All projects,14,Molise,3251,1.0
+All projects,15,Campania,26506,1.0
+All projects,16,Puglia,19641,1.0
+All projects,17,Basilicata,5186,1.0
+All projects,18,Calabria,13046,1.0
+All projects,19,Sicilia,22438,1.0
+All projects,20,Sardegna,10100,1.0
+Cultura e turismo,1,Piemonte,792,0.03293002369963827
+Cultura e turismo,2,Valle d'Aosta,55,0.05408062930186824
+Cultura e turismo,3,Lombardia,1087,0.024434104345089577
+Cultura e turismo,4,Trentino-Alto Adige,480,0.05033029254482542
+Cultura e turismo,5,Veneto,1031,0.0385233344542839
+Cultura e turismo,6,Friuli-Venezia Giulia,224,0.03629881704748015
+Cultura e turismo,7,Liguria,380,0.06705487912475737
+Cultura e turismo,8,Emilia-Romagna,900,0.04037141703673799
+Cultura e turismo,9,Toscana,1138,0.06608594657375146
+Cultura e turismo,10,Umbria,405,0.0811623246492986
+Cultura e turismo,11,Marche,502,0.061055704208221845
+Cultura e turismo,12,Lazio,1619,0.0757001917052415
+Cultura e turismo,13,Abruzzo,385,0.044359949302915085
+Cultura e turismo,14,Molise,93,0.028606582589972316
+Cultura e turismo,15,Campania,1555,0.058665962423602204
+Cultura e turismo,16,Puglia,937,0.04770632859834021
+Cultura e turismo,17,Basilicata,245,0.04724257616660239
+Cultura e turismo,18,Calabria,550,0.04215851602023609
+Cultura e turismo,19,Sicilia,1297,0.0578037258222658
+Cultura e turismo,20,Sardegna,599,0.059306930693069304
+Digitalizzazione,1,Piemonte,8171,0.3397363934971519
+Digitalizzazione,2,Valle d'Aosta,528,0.5191740412979351
+Digitalizzazione,3,Lombardia,12107,0.27214691932474655
+Digitalizzazione,4,Trentino-Alto Adige,1927,0.20205515361224705
+Digitalizzazione,5,Veneto,5540,0.2070022045361133
+Digitalizzazione,6,Friuli-Venezia Giulia,1269,0.20563928050559066
+Digitalizzazione,7,Liguria,1885,0.33262749250044116
+Digitalizzazione,8,Emilia-Romagna,3976,0.17835194904230028
+Digitalizzazione,9,Toscana,3436,0.19953542392566784
+Digitalizzazione,10,Umbria,1005,0.20140280561122245
+Digitalizzazione,11,Marche,2181,0.26526392605205545
+Digitalizzazione,12,Lazio,4910,0.2295787160424557
+Digitalizzazione,13,Abruzzo,2605,0.30014978684180205
+Digitalizzazione,14,Molise,1103,0.33928022147031683
+Digitalizzazione,15,Campania,6872,0.25926205387459444
+Digitalizzazione,16,Puglia,3903,0.19871696960439897
+Digitalizzazione,17,Basilicata,1242,0.23949093713844968
+Digitalizzazione,18,Calabria,3721,0.2852215238387245
+Digitalizzazione,19,Sicilia,5136,0.22889740618593457
+Digitalizzazione,20,Sardegna,2981,0.29514851485148513
+Giustizia,1,Piemonte,1,4.157831275206852e-05
+Giustizia,2,Valle d'Aosta,1,0.0009832841691248771
+Giustizia,3,Lombardia,1,2.2478476858408074e-05
+Giustizia,4,Trentino-Alto Adige,1,0.00010485477613505295
+Giustizia,5,Veneto,1,3.736501886933453e-05
+Giustizia,6,Friuli-Venezia Giulia,1,0.00016204829039053638
+Giustizia,7,Liguria,1,0.0001764602082230457
+Giustizia,8,Emilia-Romagna,1,4.485713004081999e-05
+Giustizia,9,Toscana,1,5.8072009291521487e-05
+Giustizia,10,Umbria,1,0.0002004008016032064
+Giustizia,11,Marche,1,0.00012162490878131841
+Giustizia,12,Lazio,3,0.00014027212792818068
+Giustizia,13,Abruzzo,1,0.00011522064754003918
+Giustizia,14,Molise,1,0.00030759766225776686
+Giustizia,15,Campania,1,3.772730702482457e-05
+Giustizia,16,Puglia,1,5.09139045873428e-05
+Giustizia,17,Basilicata,1,0.0001928268414963363
+Giustizia,18,Calabria,1,7.665184730952016e-05
+Giustizia,19,Sicilia,1,4.456725198324271e-05
+Giustizia,20,Sardegna,1,9.900990099009902e-05
+Impresa e lavoro,1,Piemonte,3910,0.1625712028605879
+Impresa e lavoro,2,Valle d'Aosta,110,0.10816125860373647
+Impresa e lavoro,3,Lombardia,5707,0.1282846674309349
+Impresa e lavoro,4,Trentino-Alto Adige,3394,0.35587711020236973
+Impresa e lavoro,5,Veneto,5048,0.1886186152524007
+Impresa e lavoro,6,Friuli-Venezia Giulia,1101,0.17841516771998056
+Impresa e lavoro,7,Liguria,458,0.08081877536615494
+Impresa e lavoro,8,Emilia-Romagna,3999,0.17938366303323913
+Impresa e lavoro,9,Toscana,2512,0.14587688734030196
+Impresa e lavoro,10,Umbria,927,0.18577154308617236
+Impresa e lavoro,11,Marche,1391,0.1691802481148139
+Impresa e lavoro,12,Lazio,2316,0.10829008276055548
+Impresa e lavoro,13,Abruzzo,1112,0.12812536006452357
+Impresa e lavoro,14,Molise,542,0.16671793294370962
+Impresa e lavoro,15,Campania,3789,0.1429487663170603
+Impresa e lavoro,16,Puglia,4852,0.24703426505778728
+Impresa e lavoro,17,Basilicata,1603,0.3091014269186271
+Impresa e lavoro,18,Calabria,2114,0.16204200521232562
+Impresa e lavoro,19,Sicilia,4222,0.18816293787325072
+Impresa e lavoro,20,Sardegna,1560,0.15445544554455445
+Inclusione sociale,1,Piemonte,395,0.016423433537067066
+Inclusione sociale,2,Valle d'Aosta,15,0.014749262536873156
+Inclusione sociale,3,Lombardia,829,0.018634657315620293
+Inclusione sociale,4,Trentino-Alto Adige,63,0.006605850896508336
+Inclusione sociale,5,Veneto,404,0.015095467623211149
+Inclusione sociale,6,Friuli-Venezia Giulia,69,0.01118133203694701
+Inclusione sociale,7,Liguria,141,0.024880889359449446
+Inclusione sociale,8,Emilia-Romagna,410,0.018391423316736197
+Inclusione sociale,9,Toscana,417,0.02421602787456446
+Inclusione sociale,10,Umbria,104,0.020841683366733466
+Inclusione sociale,11,Marche,170,0.02067623449282413
+Inclusione sociale,12,Lazio,503,0.023518960115958294
+Inclusione sociale,13,Abruzzo,412,0.04747090678649614
+Inclusione sociale,14,Molise,160,0.049215625961242696
+Inclusione sociale,15,Campania,1086,0.04097185542895948
+Inclusione sociale,16,Puglia,580,0.029530064660658824
+Inclusione sociale,17,Basilicata,182,0.0350944851523332
+Inclusione sociale,18,Calabria,648,0.04967039705656906
+Inclusione sociale,19,Sicilia,946,0.04216062037614761
+Inclusione sociale,20,Sardegna,392,0.03881188118811881
+Infrastrutture,1,Piemonte,5379,0.22364974429337658
+Infrastrutture,2,Valle d'Aosta,112,0.11012782694198624
+Infrastrutture,3,Lombardia,12848,0.28880347067682693
+Infrastrutture,4,Trentino-Alto Adige,2109,0.2211387228688267
+Infrastrutture,5,Veneto,8754,0.3270933751821545
+Infrastrutture,6,Friuli-Venezia Giulia,1725,0.27953330092367523
+Infrastrutture,7,Liguria,738,0.13022763366860773
+Infrastrutture,8,Emilia-Romagna,5979,0.2682007805140627
+Infrastrutture,9,Toscana,4270,0.24796747967479674
+Infrastrutture,10,Umbria,1071,0.21462925851703407
+Infrastrutture,11,Marche,1513,0.18401848698613477
+Infrastrutture,12,Lazio,3249,0.15191471454621966
+Infrastrutture,13,Abruzzo,1703,0.19622076276068673
+Infrastrutture,14,Molise,501,0.1541064287911412
+Infrastrutture,15,Campania,2985,0.11261601146910133
+Infrastrutture,16,Puglia,3010,0.15325085280790185
+Infrastrutture,17,Basilicata,687,0.13247204010798302
+Infrastrutture,18,Calabria,1993,0.15276713168787368
+Infrastrutture,19,Sicilia,3429,0.15282110705053925
+Infrastrutture,20,Sardegna,1810,0.1792079207920792
+Pubblica amministrazione,1,Piemonte,0,0.0
+Pubblica amministrazione,2,Valle d'Aosta,0,0.0
+Pubblica amministrazione,3,Lombardia,2,4.495695371681615e-05
+Pubblica amministrazione,4,Trentino-Alto Adige,0,0.0
+Pubblica amministrazione,5,Veneto,0,0.0
+Pubblica amministrazione,6,Friuli-Venezia Giulia,0,0.0
+Pubblica amministrazione,7,Liguria,0,0.0
+Pubblica amministrazione,8,Emilia-Romagna,3,0.00013457139012245997
+Pubblica amministrazione,9,Toscana,0,0.0
+Pubblica amministrazione,10,Umbria,0,0.0
+Pubblica amministrazione,11,Marche,1,0.00012162490878131841
+Pubblica amministrazione,12,Lazio,4,0.00018702950390424089
+Pubblica amministrazione,13,Abruzzo,0,0.0
+Pubblica amministrazione,14,Molise,0,0.0
+Pubblica amministrazione,15,Campania,2,7.545461404964914e-05
+Pubblica amministrazione,16,Puglia,0,0.0
+Pubblica amministrazione,17,Basilicata,0,0.0
+Pubblica amministrazione,18,Calabria,1,7.665184730952016e-05
+Pubblica amministrazione,19,Sicilia,5,0.00022283625991621357
+Pubblica amministrazione,20,Sardegna,0,0.0
+Salute,1,Piemonte,540,0.022452288886117
+Salute,2,Valle d'Aosta,30,0.029498525073746312
+Salute,3,Lombardia,1394,0.03133499674062085
+Salute,4,Trentino-Alto Adige,185,0.019398133584984795
+Salute,5,Veneto,549,0.020513395359264656
+Salute,6,Friuli-Venezia Giulia,163,0.02641387133365743
+Salute,7,Liguria,227,0.040056467266631375
+Salute,8,Emilia-Romagna,673,0.03018884851747185
+Salute,9,Toscana,454,0.026364692218350756
+Salute,10,Umbria,167,0.03346693386773547
+Salute,11,Marche,223,0.027122354658234007
+Salute,12,Lazio,1064,0.049749848038528076
+Salute,13,Abruzzo,295,0.03399009102431156
+Salute,14,Molise,108,0.033220547523838816
+Salute,15,Campania,1241,0.046819588017807286
+Salute,16,Puglia,883,0.0449569777506237
+Salute,17,Basilicata,126,0.024296182028538373
+Salute,18,Calabria,538,0.041238693852521845
+Salute,19,Sicilia,929,0.04140297709243248
+Salute,20,Sardegna,290,0.028712871287128714
+"Scuola, università e ricerca",1,Piemonte,4199,0.17458733524593573
+"Scuola, università e ricerca",2,Valle d'Aosta,123,0.12094395280235988
+"Scuola, università e ricerca",3,Lombardia,9465,0.21275878346483243
+"Scuola, università e ricerca",4,Trentino-Alto Adige,1093,0.11460627031561288
+"Scuola, università e ricerca",5,Veneto,4821,0.18013675596906176
+"Scuola, università e ricerca",6,Friuli-Venezia Giulia,1465,0.2374007454221358
+"Scuola, università e ricerca",7,Liguria,1628,0.2872772189871184
+"Scuola, università e ricerca",8,Emilia-Romagna,5106,0.22904050598842687
+"Scuola, università e ricerca",9,Toscana,4414,0.25632984901277583
+"Scuola, università e ricerca",10,Umbria,1155,0.23146292585170342
+"Scuola, università e ricerca",11,Marche,1835,0.22318170761371928
+"Scuola, università e ricerca",12,Lazio,7180,0.3357179595081124
+"Scuola, università e ricerca",13,Abruzzo,1940,0.223528056227676
+"Scuola, università e ricerca",14,Molise,544,0.16733312826822516
+"Scuola, università e ricerca",15,Campania,8059,0.30404436731306117
+"Scuola, università e ricerca",16,Puglia,4859,0.24739066238989868
+"Scuola, università e ricerca",17,Basilicata,923,0.1779791747011184
+"Scuola, università e ricerca",18,Calabria,3033,0.23248505288977464
+"Scuola, università e ricerca",19,Sicilia,5713,0.25461271058026563
+"Scuola, università e ricerca",20,Sardegna,2085,0.20643564356435642
+Transizione ecologica,1,Piemonte,631,0.026235915346555238
+Transizione ecologica,2,Valle d'Aosta,41,0.04031465093411996
+Transizione ecologica,3,Lombardia,988,0.022208735136107178
+Transizione ecologica,4,Trentino-Alto Adige,265,0.027786515675789034
+Transizione ecologica,5,Veneto,580,0.021671710944214027
+Transizione ecologica,6,Friuli-Venezia Giulia,141,0.022848808945065628
+Transizione ecologica,7,Liguria,181,0.031939297688371275
+Transizione ecologica,8,Emilia-Romagna,1224,0.054905127169963666
+Transizione ecologica,9,Toscana,564,0.032752613240418116
+Transizione ecologica,10,Umbria,150,0.03006012024048096
+Transizione ecologica,11,Marche,384,0.04670396497202627
+Transizione ecologica,12,Lazio,501,0.023425445364006172
+Transizione ecologica,13,Abruzzo,209,0.024081115335868188
+Transizione ecologica,14,Molise,180,0.05536757920639803
+Transizione ecologica,15,Campania,882,0.03327548479589527
+Transizione ecologica,16,Puglia,576,0.029326409042309456
+Transizione ecologica,17,Basilicata,155,0.029888160431932126
+Transizione ecologica,18,Calabria,416,0.03188716848076038
+Transizione ecologica,19,Sicilia,727,0.03240039219181745
+Transizione ecologica,20,Sardegna,372,0.03683168316831683
+Theme unavailable,1,Piemonte,33,0.0013720843208182613
+Theme unavailable,2,Valle d'Aosta,2,0.0019665683382497543
+Theme unavailable,3,Lombardia,59,0.0013262301346460765
+Theme unavailable,4,Trentino-Alto Adige,20,0.002097095522701059
+Theme unavailable,5,Veneto,35,0.0013077756604267085
+Theme unavailable,6,Friuli-Venezia Giulia,13,0.002106627775076973
+Theme unavailable,7,Liguria,28,0.0049408858302452795
+Theme unavailable,8,Emilia-Romagna,22,0.0009868568608980396
+Theme unavailable,9,Toscana,14,0.0008130081300813008
+Theme unavailable,10,Umbria,5,0.001002004008016032
+Theme unavailable,11,Marche,21,0.0025541230844076867
+Theme unavailable,12,Lazio,38,0.0017767802870902885
+Theme unavailable,13,Abruzzo,17,0.001958751008180666
+Theme unavailable,14,Molise,19,0.00584435558289757
+Theme unavailable,15,Campania,34,0.0012827284388440352
+Theme unavailable,16,Puglia,40,0.002036556183493712
+Theme unavailable,17,Basilicata,22,0.004242190512919399
+Theme unavailable,18,Calabria,31,0.002376207266595125
+Theme unavailable,19,Sicilia,33,0.0014707193154470095
+Theme unavailable,20,Sardegna,10,0.0009900990099009901

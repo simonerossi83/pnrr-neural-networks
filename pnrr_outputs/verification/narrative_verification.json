@@ -1,0 +1,17 @@
+{
+  "reviewed_utc": "2026-10-06T16:13:10.572458+00:00",
+  "original_31_code_cells_preserved": true,
+  "stakeholder_cell_executed_against_verified_run": "run_20261006T152742_823621Z",
+  "full_training_repeated": false,
+  "reason": "Only narrative and two pure result-interpretation cells were added; existing computation is byte-identical.",
+  "notebook_sha256": "6f5124b07566ae56eb69c28e92821b91547811155c4948951b8054e2d59da940",
+  "current_code_cells": 33,
+  "notebook_structure_valid": true,
+  "saved_code_cells_with_outputs": 22,
+  "original_plot_images_byte_identical": true,
+  "new_output_checked_against_source_results": true,
+  "new_narrative_cells_executed": 2,
+  "targeted_standalone_tests_passed": 2,
+  "html_export_succeeded": true,
+  "full_page_visual_review": "Not repeated: browser policy previously rejected local file access."
+}

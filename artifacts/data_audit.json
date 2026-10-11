@@ -1,0 +1,175 @@
+{
+  "seed": 42,
+  "source_sha256": {
+    "progetti.csv": "82af8338002e07bfe62148c82f945d6c302ae256a6ec634a4d511cda77a8d32c",
+    "misure.csv": "d849c07325192cf0d0833545d538b1b2bf138696f375f9dd5b9d633c4168036f",
+    "temi.csv": "ff5b633dc5621603e4a2a6f2237ebb31758f5614251d2647d9a93ac7bd8d344c"
+  },
+  "raw_projects": 298338,
+  "missing_titles": 0,
+  "duplicate_project_ids": 0,
+  "unmatched_measure_ids": [
+    75,
+    92,
+    93,
+    104,
+    148,
+    149,
+    150,
+    285,
+    328,
+    425
+  ],
+  "unmatched_measure_rows": 406,
+  "titles_under_three_tokens": 2,
+  "conflicting_title_strings": 1321,
+  "conflicting_title_rows_removed": 2905,
+  "duplicate_clean_titles_removed": 128444,
+  "class_support_before_filter": [
+    {
+      "label": "Cultura e turismo",
+      "titles": 9011,
+      "independent_groups": 9
+    },
+    {
+      "label": "Digitalizzazione",
+      "titles": 38096,
+      "independent_groups": 9
+    },
+    {
+      "label": "Giustizia",
+      "titles": 6,
+      "independent_groups": 2
+    },
+    {
+      "label": "Impresa e lavoro",
+      "titles": 41018,
+      "independent_groups": 16
+    },
+    {
+      "label": "Inclusione sociale",
+      "titles": 6918,
+      "independent_groups": 6
+    },
+    {
+      "label": "Infrastrutture",
+      "titles": 3075,
+      "independent_groups": 17
+    },
+    {
+      "label": "Pubblica amministrazione",
+      "titles": 54,
+      "independent_groups": 3
+    },
+    {
+      "label": "Salute",
+      "titles": 9362,
+      "independent_groups": 6
+    },
+    {
+      "label": "Scuola, università e ricerca",
+      "titles": 50828,
+      "independent_groups": 19
+    },
+    {
+      "label": "Transizione ecologica",
+      "titles": 8213,
+      "independent_groups": 30
+    }
+  ],
+  "excluded_classes": [
+    {
+      "label": "Giustizia",
+      "titles": 6,
+      "independent_groups": 2
+    },
+    {
+      "label": "Pubblica amministrazione",
+      "titles": 54,
+      "independent_groups": 3
+    }
+  ],
+  "split_balance_error": 0.012267266538026346,
+  "retained_unique_titles": 166521,
+  "classes": [
+    "Cultura e turismo",
+    "Digitalizzazione",
+    "Impresa e lavoro",
+    "Inclusione sociale",
+    "Infrastrutture",
+    "Salute",
+    "Scuola, università e ricerca",
+    "Transizione ecologica"
+  ],
+  "split_counts": {
+    "test": {
+      "Cultura e turismo": 1585,
+      "Digitalizzazione": 278,
+      "Impresa e lavoro": 8494,
+      "Inclusione sociale": 1059,
+      "Infrastrutture": 780,
+      "Salute": 2042,
+      "Scuola, università e ricerca": 5714,
+      "Transizione ecologica": 1267
+    },
+    "train": {
+      "Cultura e turismo": 5270,
+      "Digitalizzazione": 37168,
+      "Impresa e lavoro": 24530,
+      "Inclusione sociale": 4031,
+      "Infrastrutture": 1866,
+      "Salute": 4371,
+      "Scuola, università e ricerca": 36530,
+      "Transizione ecologica": 4537
+    },
+    "validation": {
+      "Cultura e turismo": 2156,
+      "Digitalizzazione": 650,
+      "Impresa e lavoro": 7994,
+      "Inclusione sociale": 1828,
+      "Infrastrutture": 429,
+      "Salute": 2949,
+      "Scuola, università e ricerca": 8584,
+      "Transizione ecologica": 2409
+    }
+  },
+  "split_group_counts": {
+    "test": {
+      "Cultura e turismo": 2,
+      "Digitalizzazione": 2,
+      "Impresa e lavoro": 3,
+      "Inclusione sociale": 2,
+      "Infrastrutture": 3,
+      "Salute": 2,
+      "Scuola, università e ricerca": 4,
+      "Transizione ecologica": 6
+    },
+    "train": {
+      "Cultura e turismo": 5,
+      "Digitalizzazione": 5,
+      "Impresa e lavoro": 10,
+      "Inclusione sociale": 2,
+      "Infrastrutture": 11,
+      "Salute": 2,
+      "Scuola, università e ricerca": 11,
+      "Transizione ecologica": 18
+    },
+    "validation": {
+      "Cultura e turismo": 2,
+      "Digitalizzazione": 2,
+      "Impresa e lavoro": 3,
+      "Inclusione sociale": 2,
+      "Infrastrutture": 3,
+      "Salute": 2,
+      "Scuola, università e ricerca": 4,
+      "Transizione ecologica": 6
+    }
+  },
+  "leakage_assertions_passed": [
+    "group",
+    "family",
+    "misura_id",
+    "cup",
+    "text"
+  ]
+}

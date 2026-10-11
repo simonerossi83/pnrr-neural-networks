@@ -1,0 +1,26 @@
+{
+  "raw_projects": 298338,
+  "location_rows": 351111,
+  "mapped_projects": 297500,
+  "national_only_projects": 767,
+  "projects_without_location": 71,
+  "national_and_regional_projects": 0,
+  "project_region_pairs": 300652,
+  "multi_region_projects": 806,
+  "redundant_location_rows_removed_for_region_counting": 49692,
+  "projects_without_theme": 406,
+  "unmapped_non_national_location_rows": 0,
+  "counting_unit": "Distinct progetto_id within region; one project can occur in several regions",
+  "theme_source": "Root tema inherited via misure.csv and temi.csv, not model predictions",
+  "project_snapshot_date": null,
+  "boundary_reference_date": "2025-01-01",
+  "boundary_url": "https://www.istat.it/storage/cartografia/confini_amministrativi/generalizzati/2025/Limiti01012025_g.zip",
+  "projection": "EPSG:3035",
+  "source_sha256": {
+    "progetti.csv": "82af8338002e07bfe62148c82f945d6c302ae256a6ec634a4d511cda77a8d32c",
+    "progetti_territori.csv": "1181f5e525efde2f8388bb6e7f291c781b4d1b1428be7def6002607da19a83a9",
+    "misure.csv": "d849c07325192cf0d0833545d538b1b2bf138696f375f9dd5b9d633c4168036f",
+    "temi.csv": "ff5b633dc5621603e4a2a6f2237ebb31758f5614251d2647d9a93ac7bd8d344c",
+    "geography/istat_boundaries_2025.zip": "d3bbf80b316a801405f6b2f6b0cb6f27daf10b070e83f99e6545acca878eca39"
+  }
+}

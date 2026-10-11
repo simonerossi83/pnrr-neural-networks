@@ -1,0 +1,44 @@
+{
+  "format": "torch.export ExportedProgram (.pt2)",
+  "torch_version": "2.12.0",
+  "classes": [
+    "Cultura e turismo",
+    "Digitalizzazione",
+    "Impresa e lavoro",
+    "Inclusione sociale",
+    "Infrastrutture",
+    "Salute",
+    "Scuola, università e ricerca",
+    "Transizione ecologica"
+  ],
+  "sequence_length": 80,
+  "max_batch_size": 512,
+  "models": {
+    "MLP": {
+      "file": "mlp.pt2",
+      "selected_run": "mlp_regularized",
+      "bytes": 5502923,
+      "max_absolute_logit_error": 9.5367431640625e-07,
+      "parity_batch_sizes": [
+        1,
+        2,
+        99,
+        512
+      ],
+      "distinct_parity_titles": 99
+    },
+    "CNN": {
+      "file": "cnn.pt2",
+      "selected_run": "cnn_plain",
+      "bytes": 3337120,
+      "max_absolute_logit_error": 1.9073486328125e-06,
+      "parity_batch_sizes": [
+        1,
+        2,
+        99,
+        512
+      ],
+      "distinct_parity_titles": 99
+    }
+  }
+}

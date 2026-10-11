@@ -1,0 +1,1477 @@
+{
+  "version": 1,
+  "artifact": {
+    "identity": "pnrr_complete_workflow.ipynb and standalone choropleth",
+    "revision": "3f8d236e5e0cf391be5927e2fada0c4972605f090faf9c59cfe96b763807a130",
+    "view": "All rubric requirements and portability; sampled static presentation",
+    "execution_evidence": "pnrr_outputs/standalone_verification.json"
+  },
+  "categories": [
+    {
+      "id": "completeness",
+      "label": "Usefulness/completeness",
+      "applicable": true,
+      "assessment": "All six core steps present; eight advanced criteria remain partial or missing."
+    },
+    {
+      "id": "clarity",
+      "label": "Analytical clarity",
+      "applicable": true,
+      "assessment": "Hypothesis grounding, integrated sources, rejected architectures and optimization discussion need expansion."
+    },
+    {
+      "id": "visual",
+      "label": "Visual/interaction consistency",
+      "applicable": true,
+      "assessment": "Static source figures sampled visually; HTML figure and three controls not rendered because local file browser access was rejected."
+    },
+    {
+      "id": "source",
+      "label": "Source authority/confidence",
+      "applicable": true,
+      "assessment": "Official OpenPNRR, SHAP and PyTorch references reviewed; local snapshot date and gold-label validity remain unknown."
+    },
+    {
+      "id": "values",
+      "label": "Value accuracy",
+      "applicable": true,
+      "assessment": "All four model metric rows recomputed; geographic coverage and series independently reconciled."
+    },
+    {
+      "id": "chart",
+      "label": "Within-chart agreement",
+      "applicable": true,
+      "assessment": "Image and source inspections support labels/units; HTML rendering unverified."
+    },
+    {
+      "id": "details",
+      "label": "Complete source details",
+      "applicable": false,
+      "assessment": "No dashboard source-detail modal contract applies to this notebook and separate HTML.",
+      "reason": "No dashboard source-detail modal contract applies to this notebook and separate HTML."
+    },
+    {
+      "id": "cross",
+      "label": "Cross-artifact consistency",
+      "applicable": true,
+      "assessment": "Notebook/builder, instructions, and embedded map data/source comparisons checked."
+    },
+    {
+      "id": "quality",
+      "label": "Data-quality controls",
+      "applicable": true,
+      "assessment": "Cleaning/joins, split isolation/train-only features, and geographic deduplication/coverage checked."
+    },
+    {
+      "id": "conclusions",
+      "label": "Conclusion support",
+      "applicable": true,
+      "assessment": "Weak-label scope, non-superiority uncertainty, local SHAP limits and descriptive map caveats supported."
+    }
+  ],
+  "units": [
+    {
+      "id": "rubric-1",
+      "label": "Proposal",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-1-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-2",
+      "label": "Dataset",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-2-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-3",
+      "label": "Architecture implementation",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-3-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-4",
+      "label": "Training and evaluation",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-4-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-5",
+      "label": "Results visualization",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-5-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-6",
+      "label": "Ethical reflection",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-6-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-7",
+      "label": "Theory-grounded hypothesis",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-7-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-7-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-7-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-8",
+      "label": "Empirical strategy citations",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-8-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-8-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-8-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-9",
+      "label": "Three-source synthesis",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-9-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-9-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-9-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-10",
+      "label": "Architecture alternatives and benchmarks",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-10-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-10-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-10-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-11",
+      "label": "Optimization interpretation",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-11-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-11-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-11-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-12",
+      "label": "Multilevel risks",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-12-completeness",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "rubric-13",
+      "label": "Failure/trade-off plot interpretation",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-13-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-13-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-13-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-14",
+      "label": "Explanation-technique comparison",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-14-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-14-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-14-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rubric-15",
+      "label": "Stakeholder trade-offs",
+      "kind": "question",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "completeness": {
+          "checks": [
+            {
+              "id": "rubric-15-completeness",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "rubric-15-gap",
+              "status": "open",
+              "checkIds": [
+                "rubric-15-completeness"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clarity-1",
+      "label": "Scope",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-1-clarity",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "clarity-2",
+      "label": "Hypothesis grounding",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-2-clarity",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "clarity-2-gap",
+              "status": "open",
+              "checkIds": [
+                "clarity-2-clarity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clarity-3",
+      "label": "Integrated sources",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-3-clarity",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "clarity-3-gap",
+              "status": "open",
+              "checkIds": [
+                "clarity-3-clarity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clarity-4",
+      "label": "Rejected architectures",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-4-clarity",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "clarity-4-gap",
+              "status": "open",
+              "checkIds": [
+                "clarity-4-clarity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clarity-5",
+      "label": "Optimization interpretation",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-5-clarity",
+              "state": "failed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": [
+            {
+              "id": "clarity-5-gap",
+              "status": "open",
+              "checkIds": [
+                "clarity-5-clarity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "clarity-6",
+      "label": "Risks",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "clarity-6-clarity",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-1",
+      "label": "Learning curves",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-1-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-1-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-2",
+      "label": "Model comparison",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-2-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-2-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-3",
+      "label": "Confusion matrices",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-3-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-3-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-4",
+      "label": "SHAP agreement",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-4-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-4-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-5",
+      "label": "SHAP disagreement",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-5-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-5-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-6",
+      "label": "Overall geography",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-6-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-6-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-7",
+      "label": "Geography by theme",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-7-visual",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-7-chart",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "figure-8",
+      "label": "Interactive choropleth",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "figure-8-visual",
+              "state": "unverified",
+              "evidence": [],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        },
+        "chart": {
+          "checks": [
+            {
+              "id": "figure-8-chart",
+              "state": "unverified",
+              "evidence": [],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "html-control-1",
+      "label": "Theme selector",
+      "kind": "control",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "html-control-1-visual",
+              "state": "unverified",
+              "evidence": [],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "html-control-2",
+      "label": "Region detail",
+      "kind": "control",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "html-control-2-visual",
+              "state": "unverified",
+              "evidence": [],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "html-control-3",
+      "label": "Expandable regional table",
+      "kind": "control",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "visual": {
+          "checks": [
+            {
+              "id": "html-control-3-visual",
+              "state": "unverified",
+              "evidence": [],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "source-1",
+      "label": "OpenPNRR data/metadata",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "source": {
+          "checks": [
+            {
+              "id": "source-1-source",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "source-2",
+      "label": "SHAP API",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "source": {
+          "checks": [
+            {
+              "id": "source-2-source",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "source-3",
+      "label": "PyTorch export API",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "source": {
+          "checks": [
+            {
+              "id": "source-3-source",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-1",
+      "label": "Majority metrics",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-1-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-2",
+      "label": "Logistic metrics",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-2-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-3",
+      "label": "MLP metrics",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-3-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-4",
+      "label": "CNN metrics",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-4-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-5",
+      "label": "Mapped project count",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-5-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-6",
+      "label": "Nationwide-only count",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-6-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-7",
+      "label": "No-location count",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-7-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "value-8",
+      "label": "Regional/theme series and memberships",
+      "kind": "component",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "values": {
+          "checks": [
+            {
+              "id": "value-8-values",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "cross-1",
+      "label": "Notebook/builder setup",
+      "kind": "comparison",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "cross": {
+          "checks": [
+            {
+              "id": "cross-1-cross",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "cross-2",
+      "label": "README/submission instructions",
+      "kind": "comparison",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "cross": {
+          "checks": [
+            {
+              "id": "cross-2-cross",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "cross-3",
+      "label": "Embedded map/source data",
+      "kind": "comparison",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "cross": {
+          "checks": [
+            {
+              "id": "cross-3-cross",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "quality-1",
+      "label": "Classification joins/cleaning",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "quality": {
+          "checks": [
+            {
+              "id": "quality-1-quality",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "quality-2",
+      "label": "Group isolation and training-only fitting",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "quality": {
+          "checks": [
+            {
+              "id": "quality-2-quality",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "quality-3",
+      "label": "Geographic duplicates and coverage",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "quality": {
+          "checks": [
+            {
+              "id": "quality-3-quality",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "conclusions-1",
+      "label": "Weak-label scope",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "conclusions": {
+          "checks": [
+            {
+              "id": "conclusions-1-conclusions",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "conclusions-2",
+      "label": "Superiority not established",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "conclusions": {
+          "checks": [
+            {
+              "id": "conclusions-2-conclusions",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "conclusions-3",
+      "label": "Local SHAP limits",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "conclusions": {
+          "checks": [
+            {
+              "id": "conclusions-3-conclusions",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "conclusions-4",
+      "label": "Descriptive geographic caveats",
+      "kind": "claim",
+      "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0",
+      "categories": {
+        "conclusions": {
+          "checks": [
+            {
+              "id": "conclusions-4-conclusions",
+              "state": "passed",
+              "evidence": [
+                "VERIFICATION.md",
+                "pnrr_outputs/verification/colab_setup_checks.py",
+                "pnrr_outputs/standalone_verification.json"
+              ],
+              "revision": "f93407f0f29c12b8c99a4289a55cc990a84213a4b86b7a567485b559c6f7dbb0"
+            }
+          ],
+          "findings": []
+        }
+      }
+    }
+  ]
+}
